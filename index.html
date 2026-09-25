@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#8a4dff">
+  <meta name="description" content="Brainrot Academy: beat Glorp with what you know across grade-level learning challenges.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Brainrot Academy</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icon-180.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="bootSplash" class="boot-splash" aria-hidden="true"><div class="boot-keyart" aria-hidden="true"></div><div class="boot-inner"><img src="assets/ui/brainrot-academy-logo.svg" alt=""><img class="boot-glorp" src="assets/icon-512.png" alt=""><div class="boot-copy"><b>ARE YOU SMARTER THAN A BRAINROT?</b><small>PREPARING THE CLASSROOM FOR BRAIN BATTLES…</small></div><div class="boot-stats"><span>OFFLINE READY</span><span>GRADES 1–6</span><span>PARENT FRIENDLY</span></div><div class="boot-bar"><i></i></div></div></div>
+<main id="app" class="app-shell">
+  <div id="screenFlash" class="screen-flash" aria-hidden="true"></div>
+
+  <section id="homeScreen" class="screen active premium-home-screen" aria-labelledby="homeTitle">
+    <div class="premium-home">
+      <div class="home-brand-row">
+        <img class="home-wordmark" src="assets/ui/brainrot-academy-logo.svg" alt="Brainrot Academy">
+        <button id="homeGradeQuickBtn" class="premium-chip grade-chip" type="button"><span>GRADE</span><strong id="homeGradeLabel">3rd Grade</strong><i>›</i></button>
+      </div>
+      <div class="premium-hero">
+        <div class="hero-copy-panel">
+          <div class="micro-kicker">ARE YOU SMARTER THAN A BRAINROT?</div>
+          <h1 id="homeTitle"><span>LEARN.</span><span>PLAY.</span><strong>MAKE GLORP RAGE.</strong></h1>
+          <p class="tagline">Battles, ridiculous food challenges, adaptive mastery practice, quizzes, and Professor Brainrot reviews wrapped in one gloriously ridiculous academy.</p><div class="hero-trust-row"><span>Offline-ready</span><span>No student account</span><span>Adaptive practice</span></div>
+          <button id="playBtn" class="btn btn-primary giant premium-play" type="button"><span class="play-orb">▶</span><span><b>PLAY</b><small>Choose your activity</small></span></button>
+          <div class="premium-quick-grid">
+            <button id="quizBtn" class="quick-tile quiz-tile" type="button"><span class="tile-icon"><img src="assets/ui/nav/quiz.svg" alt=""></span><b>QUIZ</b><small>Get your grade</small></button>
+            <button id="reviewShortcutBtn" class="quick-tile review-tile" type="button"><span class="tile-icon"><img src="assets/ui/nav/review.svg" alt=""></span><b>REVIEW</b><small>Professor Brainrot</small></button>
+            <button id="closetBtn" class="quick-tile closet-tile" type="button"><span class="tile-icon"><img src="assets/ui/nav/closet.svg" alt=""></span><b>CLOSET</b><small>Dress the blob</small></button>
+            <button id="parentBtn" class="quick-tile settings-tile" type="button"><span class="tile-icon"><img src="assets/ui/nav/parent.svg" alt=""></span><b>PARENT</b><small>Settings & progress</small></button>
+          </div>
+        </div>
+        <div class="professor-hero-card">
+          <div class="hero-halo" aria-hidden="true"></div>
+          <div class="hero-speech" id="homeBubble">Let's watch videos instead!</div>
+          <img class="professor-hero-img" src="assets/brand/professor-brainrot-hero.webp" alt="Professor Brainrot, a goofy green slime professor with glasses and graduation cap">
+          <div class="home-rival-peek" aria-hidden="true"><img src="assets/glorp.png" alt=""><span><small>CLASS RIVAL</small><b>GLORP</b></span></div>
+          <div class="hero-character-label"><span>YOUR VERY QUALIFIED GUIDE</span><strong>PROFESSOR BRAINROT</strong></div>
+        </div>
+      </div>
+      <div class="home-status-strip">
+        <button id="gradeBtn" class="status-card" type="button"><span class="status-icon"><img src="assets/icon-192.png" alt=""></span><span><small>LEARNER LEVEL</small><b id="homeGradeStatus">3rd Grade</b></span><i>CHANGE</i></button>
+        <button id="homeSubjectBtn" class="status-card" type="button"><span class="status-icon"><img src="assets/ui/subject-mixed.svg" alt=""></span><span><small>ACADEMY ARCADE</small><b>3 Ways to Play + 10 Subjects</b></span><i>EXPLORE</i></button>
+      </div>
+      <div class="home-showcase" aria-label="Brainrot Academy highlights">
+        <article class="showcase-card mission-card">
+          <div class="showcase-head"><span class="showcase-icon">🎮</span><div><small>PICK YOUR ACTIVITY</small><b>Different games. Same real learning.</b></div></div>
+          <ul class="showcase-list"><li>Brain Battle</li><li>Glorp's Pizza Party</li><li>Milkshake Machine</li><li>Mastery Practice</li></ul>
+        </article>
+        <article class="showcase-card rage-card">
+          <div class="showcase-head"><span class="showcase-icon">🤯</span><div><small>GLORP REACTS TO EVERYTHING</small><b>Battle him. Feed him. Make him ridiculous.</b></div></div>
+          <p>Correct answers can power attacks, build pizzas, load milkshakes, and send Glorp into increasingly ridiculous reactions.</p>
+          <div class="showcase-pills"><span>Battle</span><span>Cook</span><span>Build</span></div>
+        </article>
+        <article class="showcase-card brain-card">
+          <div class="showcase-head"><span class="showcase-icon">🧠</span><div><small>LEVEL UP YOUR BRAIN</small><b>Practice what needs work</b></div></div>
+          <p>Choose a grade, mix subjects, take quizzes, or jump back into weak skills for a quick mastery round.</p>
+          <div class="showcase-pills"><span>Grades 1–6</span><span>Offline-ready</span><span>Short rounds</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="gradeScreen" class="screen" aria-labelledby="gradeTitle">
+    <header class="screen-head"><button class="icon-btn back-btn" aria-label="Back"><img class="icon-glyph" src="assets/ui/nav/back.svg" alt=""></button><h2 id="gradeTitle">CHOOSE YOUR GRADE</h2></header>
+    <p class="screen-copy">Every subject automatically matches this grade level.</p>
+    <div class="grade-grid">
+      <button class="grade-card g1" data-grade="1"><b>1st</b><span>Grade</span><small>Fast, friendly foundational questions</small></button>
+      <button class="grade-card g2" data-grade="2"><b>2nd</b><span>Grade</span><small>Growing skills across every subject</small></button>
+      <button class="grade-card g3" data-grade="3"><b>3rd</b><span>Grade</span><small>Multiplication, vocabulary, clocks & more</small></button>
+      <button class="grade-card g4" data-grade="4"><b>4th</b><span>Grade</span><small>Deepest library: reading, science, vocabulary & more</small></button>
+      <button class="grade-card g5" data-grade="5"><b>5th</b><span>Grade</span><small>Stronger reasoning, decimals, sources & systems</small></button>
+      <button class="grade-card g6" data-grade="6"><b>6th</b><span>Grade</span><small>Middle-school bridge: evidence, cells, ratios & analysis</small></button>
+    </div>
+    <div class="glorp-aside"><img src="assets/glorp-stage.webp" alt="Glorp"><p>“Grades are just numbers wearing fancy clothes.”</p></div>
+  </section>
+
+
+  <section id="activityScreen" class="screen" aria-labelledby="activityTitle">
+    <header class="screen-head"><button class="icon-btn activity-back" aria-label="Back"><img class="icon-glyph" src="assets/ui/nav/back.svg" alt=""></button><h2 id="activityTitle">CHOOSE HOW TO PLAY</h2></header>
+    <p class="screen-copy">The learning engine stays the same. The ridiculous thing Glorp is doing changes.</p>
+    <div id="activityGrid" class="activity-grid">
+      <button class="activity-card battle-activity" data-gameplay="battle" type="button"><span class="activity-emoji"><img src="assets/ui/modes/brain-battle.svg" alt=""></span><span><em>ALL SUBJECTS</em><b>Brain Battle</b><small>Pick a subject and make Glorp rage.</small></span><i>›</i></button>
+      <button class="activity-card pizza-activity" data-gameplay="pizza" type="button"><span class="activity-emoji"><img src="assets/ui/modes/pizza-party.svg" alt=""></span><span><em>MATH KITCHEN</em><b>Glorp's Pizza Party</b><small>Correct answers build his pizza ingredient by ingredient.</small></span><i>›</i></button>
+      <button class="activity-card shake-activity" data-gameplay="milkshake" type="button"><span class="activity-emoji"><img src="assets/ui/modes/milkshake.svg" alt=""></span><span><em>SPELLING SHOP</em><b>Milkshake Machine</b><small>Spell words right, load the blender, and make Glorp slurp.</small></span><i>›</i></button>
+    </div>
+    <div class="activity-roadmap-note"><b>COMING THROUGH THE SAME SYSTEM</b><span>Grammar Crimes · Reading Detective · Boss Battles · More food & build activities</span></div>
+  </section>
+
+  <section id="subjectScreen" class="screen" aria-labelledby="subjectTitle">
+    <header class="screen-head"><button class="icon-btn subject-back" aria-label="Back"><img class="icon-glyph" src="assets/ui/nav/back.svg" alt=""></button><h2 id="subjectTitle">CHOOSE YOUR CHALLENGE</h2></header>
+    <p id="subjectModeCopy" class="screen-copy">Pick one subject or mix them all together.</p>
+    <div id="subjectGrid" class="subject-grid"></div>
+  </section>
+
+  <section id="battleScreen" class="screen battle" aria-labelledby="questionText">
+    <header class="battle-top">
+      <div class="counter"><span id="modeLabel">BATTLE</span> <strong id="questionCounter">1 / 10</strong></div>
+      <div class="meter-wrap"><label><span id="activityMeterTitle" class="meter-title"><img src="assets/ui/nav/rage.svg" alt="">GLORP RAGE</span> <span id="rageName">SMUG</span></label><div class="meter rage-meter"><div id="rageFill"></div><i class="meter-crack" aria-hidden="true"></i></div></div>
+      <button id="pauseBtn" class="icon-btn" aria-label="Pause"><img class="icon-glyph" src="assets/ui/nav/pause.svg" alt=""></button>
+    </header>
+    <div class="battle-main">
+      <div id="glorpStage" class="glorp-stage rage-0">
+        <div class="fighter-label glorp-fighter-label" aria-hidden="true"><small>YOUR RIVAL</small><b>GLORP</b></div>
+        <div id="modeSceneSign" class="mode-scene-sign" aria-hidden="true"><small>ACADEMY ARENA</small><b>BRAIN BATTLE</b></div>
+        <div class="room-set v05-room" aria-hidden="true"><span class="ambient-orb orb-a"></span><span class="ambient-orb orb-b"></span><span class="screen-flicker"></span></div>
+        <div class="rage-aura" aria-hidden="true"></div><div id="particleLayer" class="particle-layer" aria-hidden="true"></div><div id="reactionGlyph" class="reaction-glyph" aria-hidden="true"></div>
+        <div id="glorpBubble" class="speech-bubble battle-bubble">POTATO!</div>
+        <div class="glorp-wrap"><div id="glorpRig" class="glorp-rig" role="img" aria-label="Glorp reacting to the learning battle">
+          <div id="cosmeticBadge" class="cosmetic-badge" aria-hidden="true"></div>
+          <img class="rig-layer rig-base" src="assets/rig/base.webp" alt=""><img class="rig-layer rig-eye rig-eye-l" src="assets/rig/eye-left.webp" alt=""><span class="rig-lid rig-lid-l" aria-hidden="true"></span>
+          <img class="rig-layer rig-eye rig-eye-r" src="assets/rig/eye-right.webp" alt=""><span class="rig-lid rig-lid-r" aria-hidden="true"></span><img class="rig-layer rig-mouth" src="assets/rig/mouth.webp" alt=""><img class="rig-layer rig-phone" src="assets/rig/phone.webp" alt=""><img class="rig-layer rig-gesture rig-gesture-point" src="assets/rig/gesture-point.svg" alt=""><img class="rig-layer rig-gesture rig-gesture-fist" src="assets/rig/gesture-fist.svg" alt="">
+          <span class="rig-cheek rig-cheek-l" aria-hidden="true"></span><span class="rig-cheek rig-cheek-r" aria-hidden="true"></span>
+        </div><div class="glorp-face-fx" aria-hidden="true"><i class="brow brow-l"></i><i class="brow brow-r"></i><i class="sweat"></i></div></div>
+
+        <div id="activityProp" class="activity-prop hidden" aria-live="polite">
+          <div class="pizza-builder" aria-label="Pizza progress">
+            <span class="pizza-plate"></span><span class="pizza-crust food-layer" data-food-layer="1"></span><span class="pizza-sauce food-layer" data-food-layer="2"></span><span class="pizza-cheese food-layer" data-food-layer="3"></span><span class="pizza-pepperoni food-layer" data-food-layer="4"></span><span class="pizza-peppers food-layer" data-food-layer="5"></span><span class="pizza-steam food-layer" data-food-layer="6">♨</span>
+          </div>
+          <div class="shake-builder" aria-label="Milkshake progress">
+            <span class="shake-cup"></span><span class="shake-fill food-layer" data-food-layer="1"></span><span class="shake-flavor food-layer" data-food-layer="2"></span><span class="shake-swirl food-layer" data-food-layer="3"></span><span class="shake-cream food-layer" data-food-layer="4"></span><span class="shake-sprinkles food-layer" data-food-layer="5">✦ ✦ ✦</span><span class="shake-straw food-layer" data-food-layer="6"></span>
+          </div>
+          <strong id="activityPropLabel"></strong>
+        </div>
+        <div class="slime-shadow" aria-hidden="true"></div>
+      </div>
+      <div class="battle-vs-badge" aria-hidden="true"><span>VS</span></div>
+      <div class="quiz-panel">
+        <div class="fighter-label professor-fighter-label" aria-hidden="true"><small>YOUR GUIDE</small><b>PROFESSOR</b></div>
+        <div id="professorBattleHost" class="professor-battle-host hidden" aria-live="polite">
+          <img class="professor-battle-img" src="assets/brand/professor-brainrot-hero.webp" alt="Professor Brainrot">
+          <div id="professorBattleBubble" class="speech-bubble professor-battle-bubble">Professor Brainrot has a question.</div>
+        </div>
+        <div class="question-meta"><span id="subjectPill">🧠 Mixed</span><span id="skillPill"></span></div>
+        <div class="brain-meter-label"><span class="meter-title"><img src="assets/ui/nav/brain.svg" alt="">BRAIN POWER</span><strong id="brainPower">0</strong></div><div class="meter brain-meter"><div id="brainFill"></div></div>
+        <div id="questionVisual" class="question-visual hidden" aria-hidden="true"></div>
+        <div id="passageCard" class="passage-card hidden"></div>
+        <div id="questionText" class="question">3 × 7 = ?</div>
+        <div id="answerGrid" class="answer-grid"></div><div id="feedback" class="feedback" aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="resultScreen" class="screen result" aria-labelledby="resultTitle">
+    <div id="resultCard" class="result-card"><div class="result-glorp-wrap"><img id="resultGlorp" src="assets/glorp-stage.webp" alt="Glorp after the battle"><span class="result-splat" aria-hidden="true"></span></div><div>
+      <div class="eyebrow">ROUND COMPLETE</div><h2 id="resultTitle">YOU ROASTED GLORP!</h2><p id="resultSubtitle">He is absolutely furious.</p>
+      <div class="score-row"><span>SCORE <strong id="resultScore">8 / 10</strong></span><span>BEST STREAK <strong id="resultStreak">5</strong></span></div>
+      <div class="result-actions"><button id="rematchBtn" class="btn btn-primary">REMATCH</button><button id="resultHomeBtn" class="btn">HOME</button></div>
+    </div></div>
+  </section>
+
+  <section id="quizResultScreen" class="screen result" aria-labelledby="quizResultTitle">
+    <div id="quizReportCard" class="quiz-report-card">
+      <div class="report-top"><span>BRAINROT ACADEMY</span><span id="quizReportGradeLabel">3RD GRADE</span></div>
+      <div class="report-main"><div><div class="eyebrow">QUIZ COMPLETE</div><h2 id="quizResultTitle">REPORT CARD</h2><div id="letterGrade" class="letter-grade">A+</div><p id="quizResultSubtitle">Glorp is experiencing academic distress.</p></div>
+      <div class="quiz-glorp-box"><img src="assets/glorp-stage.webp" alt="Glorp reacting to the quiz grade"><div id="quizGlorpBubble" class="mini-bubble">A PLUS?!</div></div></div>
+      <div id="subjectScoreList" class="subject-score-list"></div>
+      <div class="score-row"><span>SCORE <strong id="quizScore">10 / 10</strong></span><span>GRADE <strong id="quizLetterSmall">A+</strong></span></div>
+      <div class="result-actions"><button id="reviewBtn" class="btn btn-prof hidden">PROFESSOR BRAINROT REVIEW</button><button id="quizRematchBtn" class="btn btn-primary">RETAKE QUIZ</button><button id="quizHomeBtn" class="btn">HOME</button></div>
+    </div>
+  </section>
+
+  <section id="reviewScreen" class="screen" aria-labelledby="reviewTitle">
+    <header class="screen-head"><button id="reviewExitBtn" class="icon-btn" aria-label="Back"><img class="icon-glyph" src="assets/ui/nav/back.svg" alt=""></button><h2 id="reviewTitle">PROFESSOR BRAINROT'S REVIEW</h2></header>
+    <div class="review-layout">
+      <div class="professor-stage">
+        <div class="speech-bubble professor-bubble" id="professorBubble">Ahem. Professor Brainrot will now educate you.</div>
+        <div class="professor-glorp" aria-label="Professor Brainrot, Glorp wearing academic clothes">
+          <div class="glorp-rig professor-rig" aria-hidden="true">
+            <img class="rig-layer rig-base" src="assets/rig/base.webp" alt=""><img class="rig-layer rig-eye rig-eye-l" src="assets/rig/eye-left.webp" alt=""><span class="rig-lid rig-lid-l"></span>
+            <img class="rig-layer rig-eye rig-eye-r" src="assets/rig/eye-right.webp" alt=""><span class="rig-lid rig-lid-r"></span><img class="rig-layer rig-mouth" src="assets/rig/mouth.webp" alt=""><img class="rig-layer rig-phone" src="assets/rig/phone.webp" alt=""><img class="rig-layer rig-gesture rig-gesture-point" src="assets/rig/gesture-point.svg" alt="">
+            <span class="prof-vest" aria-hidden="true"></span><span class="prof-bow" aria-hidden="true"></span><span class="prof-glasses" aria-hidden="true"></span><span class="prof-cap" aria-hidden="true"></span><img class="prof-pointer-art" src="assets/rig/prof-hand-pointer.svg" alt="" aria-hidden="true"><span class="prof-pointer" aria-hidden="true"></span>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-progress" id="reviewProgress">Review 1 of 3</div><div class="eyebrow" id="reviewSubject">VOCABULARY</div><h3 id="reviewQuestion">What does enormous mean?</h3>
+        <div class="review-answer-row"><span>You answered</span><strong id="reviewYourAnswer">Very quiet</strong></div><div class="review-answer-row correct-row"><span>Correct answer</span><strong id="reviewCorrectAnswer">Very large</strong></div>
+        <p id="reviewExplanation" class="review-explanation">Enormous means very large.</p><div class="try-again"><b>TRY A NEW ONE</b><div id="reviewTryPrompt"></div><div id="reviewAnswerGrid" class="answer-grid compact"></div><div id="reviewFeedback" class="feedback" aria-live="polite"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviewCompleteScreen" class="screen result" aria-labelledby="reviewCompleteTitle">
+    <div class="result-card professor-complete"><div class="professor-mini"><img src="assets/brand/professor-brainrot-hero.webp" alt="Professor Brainrot"></div><div><div class="eyebrow">REVIEW COMPLETE</div><h2 id="reviewCompleteTitle">BRAIN REPAIRED!</h2><p id="reviewCompleteText">Professor Brainrot is deeply annoyed by your improvement.</p><div class="score-row"><span>MASTERED <strong id="reviewMastered">3 / 3</strong></span></div><div class="result-actions"><button id="focusedRetakeBtn" class="btn btn-primary">FOCUSED RETAKE</button><button id="reviewHomeBtn" class="btn">HOME</button></div></div></div>
+  </section>
+
+  <section id="closetScreen" class="screen" aria-labelledby="closetTitle"><header class="screen-head"><button class="icon-btn back-btn" aria-label="Back"><img class="icon-glyph" src="assets/ui/nav/back.svg" alt=""></button><h2 id="closetTitle">GLORP CLOSET</h2></header><p class="screen-copy">Win rounds to unlock ridiculous Glorp gear. Glorp hates all of it.</p><div id="closetGrid" class="closet-grid"></div></section>
+
+  <section id="parentScreen" class="screen" aria-labelledby="parentTitle">
+    <header class="screen-head"><button class="icon-btn back-btn" aria-label="Back"><img class="icon-glyph" src="assets/ui/nav/back.svg" alt=""></button><h2 id="parentTitle">PARENT DASHBOARD</h2></header>
+    <div class="parent-dashboard">
+      <div class="parent-progress-card">
+        <div class="parent-progress-head"><div><span class="eyebrow">LEARNING PROGRESS</span><h3>How is my child doing?</h3></div><label>View progress<select id="parentProgressGrade"><option value="all">All Grades</option><option value="1">1st Grade</option><option value="2">2nd Grade</option><option value="3">3rd Grade</option><option value="4">4th Grade</option><option value="5">5th Grade</option><option value="6">6th Grade</option></select></label></div>
+        <div class="parent-metric-grid"><div><span>ACCURACY</span><strong id="parentAccuracy">—</strong></div><div><span>QUESTIONS</span><strong id="parentQuestions">0</strong></div><div><span>SESSIONS</span><strong id="parentSessions">0</strong></div><div><span>QUIZ AVG.</span><strong id="parentQuizAverage">—</strong></div><div><span>SKILLS TRACKED</span><strong id="parentSkillsTracked">0</strong></div><div><span>MASTERED</span><strong id="parentSkillsMastered">0</strong></div></div>
+        <p id="parentProgressNote" class="parent-progress-note"></p>
+        <div class="parent-section-title"><span>Subject report</span><small>Accuracy and practice volume</small></div><div id="parentSubjectStats" class="parent-subject-report"></div><div class="parent-section-title"><span>Skill mastery</span><small>Recent performance is weighted most heavily</small></div><div id="parentSkillMastery" class="parent-skill-report"></div>
+        <div class="parent-two-col"><div><div class="parent-section-title"><span>Recommended next</span><small>Based on recent skill accuracy</small></div><div id="parentRecommendations" class="parent-recommendations"></div><button id="practiceWeakSkillsBtn" class="btn btn-primary parent-practice-btn" type="button">PRACTICE WEAK SKILLS</button></div><div><div class="parent-section-title"><span>Recent activity</span><small>Latest completed sessions</small></div><div id="parentRecentActivity" class="parent-recent"></div></div></div>
+      </div>
+      <div class="settings-card">
+        <div class="parent-section-title"><span>Learning & app settings</span><small>Controls for the child experience</small></div>
+        <label>Default grade<select id="parentGrade"><option value="1">1st Grade</option><option value="2">2nd Grade</option><option value="3">3rd Grade</option><option value="4">4th Grade</option><option value="5">5th Grade</option><option value="6">6th Grade</option></select></label>
+        <label>Questions per round<select id="sessionLength"><option>5</option><option selected>10</option><option>20</option></select></label>
+        <label>Math practice skill<select id="skillSelect"><option value="mixed">Mixed</option><option value="addition">Addition</option><option value="subtraction">Subtraction</option><option value="multiplication">Multiplication</option><option value="division">Division</option></select></label>
+        <fieldset class="subject-settings"><legend>Subjects used in Mixed Brain Battle</legend><div id="parentSubjectToggles" class="subject-toggle-grid"></div></fieldset>
+        <label class="switch-row"><span>Sound effects</span><input id="soundToggle" type="checkbox" checked></label><label class="switch-row"><span>Glorp voice reactions</span><input id="voiceToggle" type="checkbox" checked></label><label class="switch-row"><span>Battle music</span><input id="musicToggle" type="checkbox" checked></label><label class="switch-row"><span>Gentle haptics</span><input id="hapticsToggle" type="checkbox" checked></label><label class="switch-row"><span>Larger learning text</span><input id="largeTextToggle" type="checkbox"></label>
+        <div class="stats"><b>All-time totals</b><span>Rounds played: <strong id="statRounds">0</strong></span><span>Wins vs Glorp: <strong id="statWins">0</strong></span><span>Lifetime correct: <strong id="statCorrect">0</strong></span><span>Quizzes completed: <strong id="statQuizzes">0</strong></span><span>Reviews completed: <strong id="statReviews">0</strong></span><span>Mastery practices: <strong id="statMasteryPractice">0</strong></span></div>
+        <div class="privacy-note"><b>PRIVACY BY DEFAULT</b><p>Progress stays on this device. Brainrot Academy does not require a student account or send quiz answers to a Brainrot Academy server.</p><small>Build 0.13.0 · Gameplay Settings Foundation</small></div><button id="saveSettingsBtn" class="btn btn-primary">SAVE SETTINGS</button>
+      </div>
+    </div>
+  </section>
+
+  <nav id="appDock" class="app-dock" aria-label="Primary navigation">
+    <button id="navHomeBtn" class="dock-item active" type="button" aria-label="Home"><span class="dock-glyph"><img src="assets/ui/nav/home.svg" alt=""></span><small>Home</small></button>
+    <button id="navPlayBtn" class="dock-item" type="button" aria-label="Play"><span class="dock-glyph"><img src="assets/ui/nav/play.svg" alt=""></span><small>Play</small></button>
+    <button id="navQuizBtn" class="dock-item" type="button" aria-label="Quiz"><span class="dock-glyph"><img src="assets/ui/nav/quiz.svg" alt=""></span><small>Quiz</small></button>
+    <button id="navClosetBtn" class="dock-item" type="button" aria-label="Closet"><span class="dock-glyph"><img src="assets/ui/nav/closet.svg" alt=""></span><small>Closet</small></button>
+    <button id="navParentBtn" class="dock-item" type="button" aria-label="Parent settings"><span class="dock-glyph"><img src="assets/ui/nav/parent.svg" alt=""></span><small>Parent</small></button>
+  </nav>
+  <div id="appToast" class="app-toast" role="status" aria-live="polite"></div>
+  <div id="pauseOverlay" class="modal hidden" role="dialog" aria-modal="true" aria-label="Game paused"><div class="modal-card"><h2>PAUSED</h2><p>Glorp is definitely cheating while you aren't looking.</p><button id="resumeBtn" class="btn btn-primary">RESUME</button><button id="quitBtn" class="btn">QUIT TO HOME</button></div></div>
+</main>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
